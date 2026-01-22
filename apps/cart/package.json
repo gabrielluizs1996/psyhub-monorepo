@@ -1,13 +1,13 @@
 {
-  "name": "shop",
+  "name": "cart",
   "version": "0.0.1",
   "private": true,
   "nx": {
-    "name": "shop",
+    "name": "cart",
     "targets": {
       "serve": {
         "options": {
-          "port": 4201
+          "port": 4202
         },
         "dependsOn": [
           "typecheck",
