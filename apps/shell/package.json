@@ -9,6 +9,11 @@
         "options": {
           "port": 4200
         },
+        "configurations": {
+          "development": {
+            "devRemotes": ["shop", "cart"]
+          }
+        },
         "dependsOn": [
           "typecheck"
         ]
