@@ -2,6 +2,7 @@ import * as React from 'react';
 import NxWelcome from './nx-welcome';
 import { Route, Routes } from 'react-router-dom';
 import Header from '../components/Header';
+import { OrgUi } from '@org/ui';
 
 const Shop = React.lazy(() => import('shop/Module'));
 const Cart = React.lazy(() => import('cart/Module'));
@@ -11,6 +12,8 @@ export function App() {
     <React.Suspense fallback={null}>
       <div className="min-h-screen bg-background">
         <Header mode={null} />
+
+        <OrgUi />
         <Routes>
           <Route path="/" element={<NxWelcome title="shell" />} />
           <Route path="/shop" element={<Shop />} />

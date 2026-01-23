@@ -32,10 +32,13 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../shop/tsconfig.app.json"
+      "path": "../../ui/tsconfig.lib.json"
     },
     {
       "path": "../cart/tsconfig.app.json"
+    },
+    {
+      "path": "../shop/tsconfig.app.json"
     }
   ]
 }
