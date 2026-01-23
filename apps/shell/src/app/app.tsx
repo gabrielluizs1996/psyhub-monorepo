@@ -1,6 +1,7 @@
 import * as React from 'react';
 import NxWelcome from './nx-welcome';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Shop = React.lazy(() => import('shop/Module'));
 const Cart = React.lazy(() => import('cart/Module'));
@@ -8,22 +9,21 @@ const Cart = React.lazy(() => import('cart/Module'));
 export function App() {
   return (
     <React.Suspense fallback={null}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/shop">Shop</Link>
-        </li>
-        <li>
-          <Link to="/cart">Cart</Link>
-        </li>
-      </ul>
-      <Routes>
-        <Route path="/" element={<NxWelcome title="shell" />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      <div className="min-h-screen bg-background">
+        <Header mode={null} />
+        <Routes>
+          <Route path="/" element={<NxWelcome title="shell" />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+
+        {/* Footer */}
+        <footer className="py-8 border-t border-border">
+          <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
+            <p>© 2024 PsyHub. Cuidando da sua saúde mental.</p>
+          </div>
+        </footer>
+      </div>
     </React.Suspense>
   );
 }
