@@ -41,6 +41,9 @@
     },
     {
       "path": "./ui"
+    },
+    {
+      "path": "./libs/shared/psyhub-ui"
     }
   ]
 }

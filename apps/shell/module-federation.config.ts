@@ -15,6 +15,18 @@ const config: ModuleFederationConfig = {
    *
    */
   remotes: ['shop', 'cart'],
+  shared: (name, config) => {
+    if (name === '@org/psyhub-ui') {
+      return {
+        ...config,
+        singleton: true,
+        strictVersion: false,
+        requiredVersion: false,
+      };
+    }
+
+    return config;
+  },
 };
 
 /**

@@ -17,6 +17,9 @@
     "strict": true,
     "target": "es2022",
     "customConditions": ["@org/source"],
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@org/psyhub-ui": ["libs/shared/psyhub-ui/src/index.ts"]
+    }
   }
 }

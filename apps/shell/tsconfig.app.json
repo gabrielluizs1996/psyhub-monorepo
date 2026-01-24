@@ -32,7 +32,7 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../ui/tsconfig.lib.json"
+      "path": "../../libs/shared/psyhub-ui/tsconfig.lib.json"
     },
     {
       "path": "../cart/tsconfig.app.json"
