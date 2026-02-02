@@ -40,9 +40,6 @@
       "path": "./apps/cart"
     },
     {
-      "path": "./ui"
-    },
-    {
       "path": "./libs/shared/psyhub-ui"
     }
   ]
