@@ -1,12 +1,14 @@
 import { motion } from "framer-motion"
 import { Brain, Heart, Shield, Users } from "lucide-react";
+import { ModeSelector } from "../components";
+import { useState } from "react";
 
 export function NxWelcome({ title }: { title: string }) {
+  const [_selectedMode, setSelectedMode] = useState<'presencial' | 'remoto' | null>(null);
+
   return (
     <>
-    {/* Hero Section */}
       <section className="relative overflow-hidden">
-        {/* Background gradient */}
         <div className="absolute inset-0 gradient-hero opacity-5" />
         
         <div className="container mx-auto px-4 py-16 md:py-24 relative">
@@ -45,13 +47,12 @@ export function NxWelcome({ title }: { title: string }) {
               <p className="text-lg font-semibold text-foreground mb-6">
                 Como você prefere o atendimento?
               </p>
-              {/* <ModeSelector onSelectMode={setSelectedMode} /> */}
+              <ModeSelector onSelectMode={setSelectedMode} />
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <motion.div
