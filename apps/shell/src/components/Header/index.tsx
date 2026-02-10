@@ -9,7 +9,7 @@ interface HeaderProps {
   onLogoClick?: () => void;
 }
 
-const Header = ({ mode, onBack, onLogoClick }: HeaderProps) => {
+export const Header = ({ mode, onBack, onLogoClick }: HeaderProps) => {
   //   const { user, loading } = useAuth();
   const navigate = useNavigate();
   const user = null;
@@ -105,5 +105,3 @@ const Header = ({ mode, onBack, onLogoClick }: HeaderProps) => {
     </motion.header>
   );
 };
-
-export { Header };

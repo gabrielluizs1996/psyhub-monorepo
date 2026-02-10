@@ -1,2 +1,2 @@
 export { Header } from './header';
-export { ModeSelector } from './modeSelector/ModeSelector';
+export { ModeSelector } from './modeSelector';
