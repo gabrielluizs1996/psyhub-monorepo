@@ -1,19 +1,22 @@
 import * as React from 'react';
 import NxWelcome from './nx-welcome';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Header } from '../components';
 
 const Shop = React.lazy(() => import('shop/Module'));
 const Cart = React.lazy(() => import('cart/Module'));
 
 export function App() {
+  const navigate = useNavigate();
+
   return (
     <React.Suspense fallback={null}>
       <div className="min-h-screen bg-background">
-        <Header mode={null} />
+        <Header mode={null} onLogoClick={()  => navigate('/')} />
 
         <Routes>
           <Route path="/" element={<NxWelcome title="shell" />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
