@@ -11,7 +11,10 @@
         },
         "configurations": {
           "development": {
-            "devRemotes": ["shop", "cart"]
+            "devRemotes": [
+              "shop",
+              "cart"
+            ]
           }
         },
         "dependsOn": [
@@ -28,6 +31,7 @@
   },
   "devDependencies": {
     "shop": "*",
-    "cart": "*"
+    "cart": "*",
+    "auth": "*"
   }
 }

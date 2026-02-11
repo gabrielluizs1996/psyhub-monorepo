@@ -35,6 +35,9 @@
       "path": "../../libs/shared/psyhub-ui/tsconfig.lib.json"
     },
     {
+      "path": "../auth/tsconfig.app.json"
+    },
+    {
       "path": "../cart/tsconfig.app.json"
     },
     {

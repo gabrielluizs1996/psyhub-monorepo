@@ -14,7 +14,7 @@ const config: ModuleFederationConfig = {
    * declare module 'my-external-remote';
    *
    */
-  remotes: ['shop', 'cart'],
+  remotes: ['shop', 'cart', 'auth'],
   shared: (name, config) => {
     if (name === '@org/psyhub-ui') {
       return {
