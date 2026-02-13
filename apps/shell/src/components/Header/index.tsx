@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Brain, ArrowLeft, MapPin, Video, LogIn, User } from 'lucide-react';
 import { Button } from '@org/psyhub-ui';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 interface HeaderProps {
   mode: 'presencial' | 'remoto' | null;
@@ -12,8 +13,8 @@ interface HeaderProps {
 export const Header = ({ mode, onBack, onLogoClick }: HeaderProps) => {
   //   const { user, loading } = useAuth();
   const navigate = useNavigate();
-  const user = null;
-  const loading = false;
+  const [ user ] = useState(null);
+  const [loading] = useState(false);
 
   return (
     <motion.header
@@ -40,7 +41,7 @@ export const Header = ({ mode, onBack, onLogoClick }: HeaderProps) => {
             <div className="w-10 h-10 rounded-xl gradient-hero flex items-center justify-center">
               <Brain className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground hidden sm:block">
+            <span className="text-xl font-bold text-foreground sm:block">
               PsyHub
             </span>
           </button>

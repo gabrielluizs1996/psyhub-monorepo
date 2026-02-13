@@ -25,7 +25,7 @@ export function App() {
   }
 
   function AuthLayout() {
-    return <Outlet />; // sem header
+    return <Outlet />;
   }
 
   return (
