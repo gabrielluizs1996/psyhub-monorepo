@@ -4,7 +4,7 @@ import '../styles.css';
 export function App() {
   return (
     <div>
-      <NxWelcome title="auth" />
+      <NxWelcome mode="login" />
     </div>
   );
 }
