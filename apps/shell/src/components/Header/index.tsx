@@ -41,7 +41,7 @@ export const Header = ({ mode, onBack, onLogoClick }: HeaderProps) => {
             <div className="w-10 h-10 rounded-xl gradient-hero flex items-center justify-center">
               <Brain className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground sm:block">
+            <span className="text-xl font-bold text-foreground hidden sm:block">
               PsyHub
             </span>
           </button>
